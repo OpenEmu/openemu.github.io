@@ -1,6 +1,438 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <h1>Hello World</h1>
+<!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8" />
+    <title>OpenEmu - Multiple Video Game System</title>
+    <meta name="description" content="Console and Arcade video game emulator for Mac OSX" />
+    <meta name="keywords" content="openemu, console emulator, arcade emulator" />
+    <!--[if gte IE 8]><!-->
+    <link href="css/style.css" rel="stylesheet" />
+    <!--<![endif]-->
+  </head>
+
+  <body class="sect-overview">
+
+    <div id="page">
+      <div id="head">
+        <h1 id="logo"><a href="/">OpenEmu</a></h1>
+        <div id="nav">
+          <div class="container">
+            <ul class="nav">
+              <li class="nav-overview"><a href="/">Overview</a></li>
+              <li class="nav-news"><a href="/">News</a></li>
+              <li class="nav-forum"><a href="https://github.com/OpenEmu/OpenEmu/wiki">Help</a></li>
+              <li class="nav-github"><a href="https://github.com/OpenEmu">Github</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="body">
+
+        <div class="intro">
+          <div class="container">
+            <div class="intro-content">
+              <h2>OpenEmu is about to change the world of video game emulation. One console at a time...</h2>
+              <p>For the first time, the 'It just works' philosophy now extends to open source video game emulation on the Mac. With OpenEmu, it is extremely easy to add, browse, organize and with a compatible gamepad, play those favorite games (ROMs) you already own.</p>
+              <div class="intro-download">
+                <a href="https://github.com/OpenEmu/OpenEmu/releases/download/v1.0/OpenEmu_1.0.zip" class="btn">Download Now</a>
+                <div class="btn-group">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://github.com/OpenEmu/OpenEmu/releases/download/v1.0/OpenEmu_1.0-experimental.zip">OpenEmu Experimental</a></li>
+                    <li><a href="/files/homebrew-all.zip">Game (ROM) Starter Pack</a></li>
+<!--
+                    <li><a href="#">Wallpapers (Mac &amp; iOS)</a></li>
+                    <li><a href="#">Shader Pack</a></li>
+-->
+                    <li><a href="/files/press-pack.zip">Press Pack</a></li>
+                  </ul>
+                </div>
+                <em class="intro-download-info">For Mac OSX 10.7 or above</em>
+              </div>
+              <ul class="intro-th">
+                <li id="intro-img1"><img src="img/intro-th1.jpg" alt="screen" class="img" /></li>
+                <li id="intro-img2"><img src="img/intro-th2.jpg" alt="screen" class="img" /></li>
+                <li id="intro-img3"><img src="img/intro-th3.jpg" alt="screen" class="img" /></li>
+                <li id="intro-img4"><img src="img/intro-th4.jpg" alt="screen" class="img" /></li>
+                <li id="intro-img5"><img src="img/intro-th5.jpg" alt="screen" class="img" /></li>
+                <li id="intro-img6"><img src="img/intro-th6.jpg" alt="screen" class="img" /></li>
+              </ul>
+            </div>
+          </div>
+          <div class="intro-hero">
+            <div class="container">
+              <img src="img/intro-nes-grid.png" alt="screen" class="intro-img intro-img1" />
+              <img src="img/intro-gb-grid.png" alt="screen" class="intro-img intro-img2" />
+              <img src="img/intro-md.png" alt="screen" class="intro-img intro-img3" />
+              <img src="img/intro-prefs.png" alt="screen" class="intro-img intro-img4" />
+              <img src="img/intro-coverflow.png" alt="screen" class="intro-img intro-img5" />
+              <img src="img/intro-list.png" alt="screen" class="intro-img intro-img6" />
+            </div>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="container">
+            <div class="controls-content">
+              <h2><strong>Take Control</strong><br />
+                Up, Up, Down, Down, Left, Right,<br />
+                Left, Right, B, A, Start</h2>
+              <p>Why restrict yourself to just the keyboard? Although it is not a requirement, OpenEmu is best used with a peripheral gamepad or controller to interact with your games.</p>
+              <p>Via the Controller Preferences, simply auto- magically assign buttons with any generic HID compliant USB or Bluetooth game controller.</p>
+              <p>Plug in your gamepad, select it from the list&hellip; and press start to begin your adventures!</p>
+<!--
+              <p class="controls-video"><a href="#controls-video" class="lean-modal"><img src="img/controls-video.jpg" alt="screen" class="img" /></a></p>
+-->
+              <p class="controls-action"><a href="https://github.com/OpenEmu/OpenEmu/wiki#supported-controllers">Learn More <b class="caret"></b></a></p>
+            </div>
+            <div class="controllers">
+              <div class="controller controls-sms"></div>
+              <div class="controller controls-gb"></div>
+              <div class="controller controls-nes"></div>
+              <div class="controller controls-snes"></div>
+              <div class="controller controls-gba"></div>
+              <div class="controller controls-md"></div>
+            </div>
+            <img src="img/controls-prefs.png" alt="screen" class="controls-prefs" />
+          </div>
+        </div>
+        <div class="organized fold">
+          <div class="container">
+            <div class="organized-content">
+              <h2><strong>Time To Get Organized</strong><br />
+                Everything in its place. Automatically</h2>
+              <p>We combine some of the best emulation projects together into one beautiful unified application that simply organizes your personal games library. Watch as you drop in backups of your games (ROMs) & they are gracefully added to their appropriate library along with original box art!</p>
+            </div>
+            <div class="organized-steps">
+              <div class="step step1">
+                <h3 class="step-num">1</h3>
+                <p class="step-img"><img src="img/org-step1.jpg" alt="screen" class="img" /></p>
+                <p class="step-content">Drag n’ Drop a backup game (ROM) from your Mac desktop.</p>
+              </div>
+              <div class="step step2">
+                <h3 class="step-num">2</h3>
+                <p class="step-img"><img src="img/org-step2.jpg" alt="screen" class="img" /></p>
+                <p class="step-content">OpenEmu ‘scans’ your game and begins the organisation process.</p>
+              </div>
+              <div class="step step3">
+                <h3 class="step-num">3</h3>
+                <p class="step-img"><img src="img/org-step3.jpg" alt="screen" class="img" /></p>
+                <p class="step-content">Your game is now neatly organised and you are ready to start playing!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="features fold">
+          <div class="container">
+            <h2><strong>Features Overview</strong><br />
+              An exciting world of video games is within your grasp.</h2>
+            <div class="features-content">
+              <div class="feature feature1">
+                <p class="feature-ico"></p>
+                <h4>Library</h4>
+                <p>One of the standout features of OpenEmu is how it organizes all your games into one unique, unified games library. Watch as backups of the games (ROMs) you already own are gracefully added to their appropriate library and box art is magically added. You can even create your own ‘collections’ mix and matched from different consoles.</p>
+<!--
+                <p class="feature-action"><a href="#">Learn More <b class="caret"></b></a></p>
+-->
+              </div>
+              <div class="feature feature3">
+                <p class="feature-ico"></p>
+                <h4>Controls & Controllers</h4>
+                <p>Any generic HID compliant USB or Bluetooth game controller should work with OpenEmu out of the box. OpenEmu now automatically maps controls for the following recognized devices in our database:<br />
+                  <br />
+                  PlayStation Dualshock 3 and Dualshock 4<br />
+                  Wiimote and Wii U Pro<br />
+                  Xbox 360 & 3rd party <a href="http://tattiebogle.net/index.php/ProjectRoot/Xbox360Controller/OsxDriver">(driver required)</a><br />
+                  Sega Saturn USB<br />
+                  PS3 Neo Geo Pad USB<br />
+                  Logitech series (Dual Action, Rumblepad 2, Gamepad F310/F510/F710)<br />
+                  Gravis GamePad Pro<br />
+                  Retrolink SNES and N64<br />
+                  RetroUSB SNES RetroPort and RetroPad<br />
+                  Retrode (SNES)</p>
+                  <p class="feature-action"><a href="https://github.com/OpenEmu/OpenEmu/wiki#supported-controllers">Learn More <b class="caret"></b></a></p>
+              </div>
+            </div>
+            <div class="features-content">
+              <div class="feature feature2">
+                <p class="feature-ico"></p>
+                <h4>Cores</h4>
+                <p>OpenEmu is modular, and thanks to the work of other great open source projects, it can emulate a wide variety of video game systems (we call them 'cores'). Currently, the following open source emulation projects are used to power OpenEmu:<br />
+                  <br />
+                  CrabEmu<br />
+                  DeSmuME<br />
+                  FCEU<br />
+                  Gambatte<br />
+                  Genesis Plus GX<br />
+                  Higan<br />
+                  Mednafen<br />
+                  NeoPop<br />
+                  Nestopia<br />
+                  Picodrive<br />
+                  Snes9x<br />
+                  TwoMbit<br />
+                  VisualBoyAdvance<br />
+                  ... and more!<br /><br /><img src="img/beta_icon@2x.png" alt="beta" /> (<a href="https://github.com/OpenEmu/OpenEmu/releases/download/v1.0/OpenEmu_1.0-experimental.zip">OpenEmu Experimental</a> includes WIP cores that may not be quite ready)</p>
+                  <p class="feature-action"><a href="https://github.com/OpenEmu/OpenEmu/wiki#supported-systems">Learn More <b class="caret"></b></a></p>
+              </div>
+<!--
+              <div class="feature feature4">
+                <p class="feature-ico"></p>
+                <h4>Archive.vg</h4>
+                <p>'The Archive' is a full-fledged, community driven and open video game database that aims to accurately catalogue all known information and media for games old & new. OpenEmu utilizes this unique website by grabbing box art and other metadata for the games you add to your personal games library.</p>
+                <p class="feature-action"><a href="#">Learn More <b class="caret"></b></a></p>
+              </div>
+-->
+            </div>
+          </div>
+        </div>
+        <div class="games fold">
+          <div class="container">
+            <h2><strong>Game (ROM) Starter Pack</strong><br />
+              Would you like to play a homebrew game?</h2>
+            <p class="games-download"><a href="/files/homebrew-all.zip" class="btn">Download All</a></p>
+          </div>
+          <div class="games-scroll">
+            <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+            <div class="viewport">
+              <div class="overview">
+                <div class="container">
+                  <ul class="games-info">
+                    <li>
+                      <a href="/files/awerewolftale.zip">
+                      <img src="img/game1.jpg" alt="screen" class="img" />
+                      </a>
+                      <p><strong>A Werewolf Tale</strong><br />
+                        for Game Boy Advance<br />
+                        by <a href="http://holyhellgba.blogspot.com/p/downloads.html">Genecyst Games</a></p>
+                    </li>
+                    <li>
+                      <a href="/files/alterego.zip">
+                      <img src="img/game2.jpg" alt="screen" class="img" />
+                      </a>
+                      <p><strong>Alter Ego</strong><br />
+                        for Nintendo (NES)<br />
+                        by <a href="http://shiru.untergrund.net/software.shtml#nes">Shiru Otaku</a></p>
+                    </li>
+                    <li>
+                      <a href="/files/assimilate.zip">
+                      <img src="img/game3.jpg" alt="screen" class="img" />
+                      </a>
+                      <p><strong>Assimilate</strong><br />
+                        for Nintendo (NES)<br />
+                        by <a href="http://nessylum.wordpress.com/downloadplay-demo/">Nessylum Games</a></p>
+                    </li>
+                    <li>
+                      <a href="/files/battlekid.zip">
+                      <img src="img/game15.jpg" alt="screen" class="img" />
+                      </a>
+                      <p><strong>Battle Kid (Demo)</strong><br />
+                        for Nintendo (NES)<br />
+                        by <a href="http://sivak.nintendoage.com/BK.html">Sivak Games</a></p>
+                    </li>
+                    <li>
+                      <a href="/files/bladebuster.zip">
+                      <img src="img/game4.jpg" alt="screen" class="img" />
+                      </a>
+                      <p><strong>Blade Buster</strong><br />
+                        for Nintendo (NES)<br />
+                        by <a href="http://hlc6502.web.fc2.com/Bbuster.htm">HLC! Project</a></p>
+                    </li>
+                    <li>
+                      <a href="/files/christmascraze.zip">
+                      <img src="img/game5.jpg" alt="screen" class="img" />
+                      </a>
+                      <p><strong>Christmas Craze</strong><br />
+                        for Super Nintendo (SNES)<br />
+                        by <a href="http://shiru.untergrund.net/software.shtml#nes">Shiru Otaku</a></p>
+                    </li>
+                    <li>
+                      <a href="/files/dpadhero.zip">
+                      <img src="img/game6.jpg" alt="screen" class="img" />
+                      </a>
+                      <p><strong>D-Pad Hero</strong><br />
+                        for Nintendo (NES)<br />
+                        by <a href="http://www.dpadhero.com/Download.html">D-Pad Hero Team</a></p>
+                    </li>
+                    <li>
+                      <a href="/files/dpadhero2.zip">
+                      <img src="img/game7.jpg" alt="screen" class="img" />
+                      </a>
+                      <p><strong>D-Pad Hero 2</strong><br />
+                        for Nintendo (NES)<br />
+                        by <a href="http://www.dpadhero.com/Download.html">D-Pad Hero Team</a></p>
+                    </li>
+                    <li>
+                      <a href="/files/holyhell.zip">
+                      <img src="img/game8.jpg" alt="screen" class="img" />
+                      </a>
+                      <p><strong>Holy Hell</strong><br />
+                        for Game Boy Advance<br />
+                        by <a href="http://holyhellgba.blogspot.com/p/downloads.html">Genecyst Games</a></p>
+                    </li>
+                    <li>
+                      <a href="/files/lawnmower.zip">
+                      <img src="img/game9.jpg" alt="screen" class="img" />
+                      </a>
+                      <p><strong>Lawn Mower</strong><br />
+                        for Nintendo (NES)<br />
+                        by <a href="http://shiru.untergrund.net/software.shtml#nes">Shiru Otaku</a></p>
+                    </li>
+                    <li>
+                      <a href="/files/streemerz.zip">
+                      <img src="img/game10.jpg" alt="screen" class="img" />
+                      </a>
+                      <p><strong>Streemerz</strong><br />
+                        for Nintendo (NES)<br />
+                        by <a href="http://www.fauxgame.com">Fauxgame Company</a></p>
+                    </li>
+                    <li>
+                      <a href="/files/superbatpuncher.zip">
+                      <img src="img/game11.jpg" alt="screen" class="img" />
+                      </a>
+                      <p><strong>Super Bat Puncher (Demo)</strong><br />
+                        for Nintendo (NES)<br />
+                        by <a href="http://morphcat.de/superbatpuncher/">Morphcat Games</a></p>
+                    </li>
+                    <li>
+                      <a href="/files/uwolquestformoney.zip">
+                      <img src="img/game12.jpg" alt="screen" class="img" />
+                      </a>
+                      <p><strong>Uwol: Quest For Money</strong><br />
+                        for Sega Genesis<br />
+                        by <a href="http://shiru.untergrund.net/software.shtml#nes">Shiru Otaku</a></p>
+                    </li>
+                    <li>
+                      <a href="/files/waimanu.zip">
+                      <img src="img/game13.jpg" alt="screen" class="img" />
+                      </a>
+                      <p><strong>Waimanu</strong><br />
+                        for Game Boy Advance<br />
+                        by <a href="http://holyhellgba.blogspot.com/p/downloads.html">Genecyst Games</a></p>
+                    </li>
+                    <li>
+                      <a href="/files/zoomingsecretary.zip">
+                      <img src="img/game14.jpg" alt="screen" class="img" />
+                      </a>
+                      <p><strong>Zooming Secretary</strong><br />
+                        for Nintendo (NES)<br /> 
+                        by <a href="http://shiru.untergrund.net/software.shtml#nes">Shiru Otaku</a></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<!--
+        <div id="controls-video" style="display: none;">
+          <iframe width="640" height="360" src="http://www.youtube.com/embed/_SVwxca6o9M"></iframe>
+        </div>
+-->
+
+      </div>
+      <div id="foot">
+        <div class="foot container">
+          <ul class="foot-nav">
+            <li>Sitemap
+              <ul>
+                <li><a href="/">Overview</a></li>
+                <li><a href="/">News</a></li>
+                <li><a href="https://github.com/OpenEmu/OpenEmu/wiki">Help</a></li>
+                <li><a href="https://github.com/OpenEmu">Github</a></li>
+              </ul>
+            </li>
+            <li>Download
+              <ul>
+                <li><a href="https://github.com/OpenEmu/OpenEmu/releases/download/v1.0/OpenEmu_1.0.zip">Application</a></li>
+<!--
+                <li><a href="#">Wallpapers</a></li>
+                <li><a href="#">Shader Pack</a></li>
+-->
+                <li><a href="/files/homebrew-all.zip">Game (ROM) Starter Pack</a></li>
+                <li><a href="/files/press-pack.zip">Press Pack</a></li>
+              </ul>
+            </li>
+            <li>Social
+              <ul>
+                <li><a href="http://twitter.com/openemu">Twitter</a></li>
+                <li><a href="/rss/">RSS Feed</a></li>
+              </ul>
+            </li>
+            <li>Friends
+              <ul>
+                <li><a href="http://themaister.net/retroarch.html">RetroArch</a></li>
+                <li><a href="http://archive.vg/">Archive.vg</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      $(document).ready(function(){
+
+        // Intro Thumbs
+        $('.intro-th li').click(function(){
+          var introImg = '.' + $(this).attr('id');
+         $('.intro-th li').removeClass('active');
+         $(this).addClass('active');
+          $('.intro-img').removeClass('active');
+          $(introImg).addClass('active');
+        }).filter(':first').click();
+
+        // On Scroll
+        $(window).scroll(function(event){
+
+          // Intro Affix
+          var introTop = $('.intro').offset().top - parseFloat($('.intro').css('marginTop').replace(/auto/, 0));
+          var introBot = 500;
+          var introY = $(this).scrollTop();
+          if (introY >= introTop && introY <= introBot) {
+            $('.intro-hero').removeClass('affix affix-bottom');
+          } else if (introY >= introBot) {
+            $('.intro-hero').removeClass('affix affix-bottom').addClass('affix-bottom');
+          } else {
+            $('.intro-hero').removeClass('affix affix-bottom');
+          }
+
+          // Controllers Explode
+          var controlsY = $(this).scrollTop();
+          if (controlsY >= 800) {
+            $('.controls').addClass('explode');
+          } else {
+            $('.controls').removeClass('explode');
+          }
+
+/*
+          // Steps Activate
+          var stepsTop = $('.organized').offset().top - parseFloat($('.organized').css('marginTop').replace(/auto/, 0));
+          var stepsY = $(this).scrollTop();
+          if (stepsY >= stepsTop && !$('.step').hasClass('hover')){
+            $('.step1').addClass('hover');
+            var cycleSteps = function(){
+              $('.organized-steps .hover').removeClass('hover').next().add('.organized-steps > div:first').last().addClass('hover');
+            };
+            setInterval(cycleSteps, 3500);
+          };
+*/
+
+        });
+
+        // Games Scrollbar
+        $('.games-scroll').tinyscrollbar({ axis: 'x', size: 940, sizethumb: 179, scroll: false });
+
+      });
+    </script>
+
   </body>
 </html>

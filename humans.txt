@@ -1,0 +1,21 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Design: David McLeod
+  Site: http://dribbble.com/mucx
+  Twitter: mucx
+  Location: USA, UK
+
+  Frontend: Craig Erskine
+  Site: http://craigerskine.com
+  Twitter: craigerskine
+  Location: USA
+
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Features: Responsive 960 grid
+  Components: jQuery, Fancybox, html5shim
+  Software: Fireworks, Photoshop, Coda
