@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OpenEmu Download Stats</title>
+</head>
+<body>
+  <table width="400px" border="1" id="outputStats">
+  </table>
+  <br />
+  Data from <a href="https://api.github.com/repos/OpenEmu/OpenEmu/releases">https://api.github.com/repos/OpenEmu/OpenEmu/releases</a>
+  <script>
+  function printDownloadStats() {
+      var responseObj = JSON.parse(this.responseText);
+      var downloadCount = 0;
+      for (var i = 0; i < responseObj.length; i++) {
+          document.getElementById("outputStats").innerHTML += "<tr><td bgcolor=\"#C0C0C0\" colspan=\"2\">" + responseObj[i].name + "&emsp;released " + responseObj[i].published_at + "</td></tr><tr><td>" + responseObj[i].assets[0].name + "</td><td>" + responseObj[i].assets[0].download_count + "</td></tr><tr><td>" + responseObj[i].assets[1].name + "</td><td>" + responseObj[i].assets[1].download_count + "</td></tr>";
+
+          downloadCount = downloadCount + responseObj[i].assets[0].download_count + responseObj[i].assets[1].download_count;
+      }
+      document.getElementById("outputStats").innerHTML += "<tr><td><strong>Total Downloads</strong></td><td><strong>" + downloadCount + "</strong></td></tr>";
+  }
+
+  var request = new XMLHttpRequest();
+  request.onload = printDownloadStats;
+  request.open('get', 'https://api.github.com/repos/OpenEmu/OpenEmu/releases', true);
+  request.send();
+  </script>
+</body>
+</html>
