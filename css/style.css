@@ -13,7 +13,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 .container { *zoom: 1; }
 
 /* elements */
-body { background: #101010 url(../img/grunge.png) repeat 50% 0; color: #D1DDF4; font: 14px/20px "Helvetica Neue", Arial, sans-serif; text-shadow: 0 1px 0 #000; overflow-y: scroll; overflow-x: hidden; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; }
+body { background: #101010 url(../img/grunge.png) repeat 50% 0; color: #D1DDF4; font: 14px/20px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; text-shadow: 0 1px 0 #000; overflow-y: scroll; overflow-x: hidden; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; }
 
 a { color: #D2DDF5; font-weight: bold; text-decoration: none; }
 a:hover,a:focus { color: #FFF; text-decoration: none; outline: 0; }
