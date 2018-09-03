@@ -1,0 +1,25 @@
+{
+  "name": "website-gulp-openemu",
+  "version": "1.0.0",
+  "description": "OpenEmu main website",
+  "main": "../index.html",
+  "scripts": {
+    "postinstall": "./node_modules/.bin/gulp html && ./node_modules/.bin/gulp css && ./node_modules/.bin/gulp js"
+  },
+  "author": "Craig Erskine",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-purgecss": "^1.0.0",
+    "gulp-rename": "^1.3.0",
+    "gulp-uglify": "^3.0.0",
+    "postcss": "^6.0.23",
+    "tailwindcss": "^0.6.5"
+  }
+}

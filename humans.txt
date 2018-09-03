@@ -1,7 +1,6 @@
 /* the humans responsible & colophon */
 /* humanstxt.org */
 
-
 /* TEAM */
   Design: David McLeod
   Site: http://dribbble.com/mucx
@@ -16,6 +15,6 @@
 
 /* SITE */
   Standards: HTML5, CSS3
-  Features: Responsive 960 grid
-  Components: jQuery, Fancybox, html5shim
-  Software: Fireworks, Photoshop, Coda
+  Features: Responsive website
+  Components: jQuery, TailwindCSS, Vue.js, Gulp
+  Software: Sketch, Sublime Text
