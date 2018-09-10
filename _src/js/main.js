@@ -24,7 +24,7 @@ $(function(){
   });
 
   // preload
-  $('.intro-th').each(function(){
+  $('.intro-th a').each(function(){
     var img = new Image();
     img.src = $(this).data('src');
     preloadImgs.push(img);
