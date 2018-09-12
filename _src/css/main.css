@@ -19,6 +19,9 @@ img { vertical-align: middle; }
 
 .bg-btn { background-image: linear-gradient(to bottom, rgba(255,255,255,.1) 0%,rgba(0,0,0,0.1) 100%); }
 
+.img-border { display: inline-block; position: relative; }
+.img-border:after { border: 1px solid #000; width: 100%; height: 100%; display: block; content: ""; position: absolute; top: 0; left: 0; box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 2px 3px rgba(0,0,0,0.75); }
+
 .controls-prefs { top: 65px; left: -247px; }
 
 .controller { @apply .hidden .absolute .pin-t .z-10 .transition-slow; }

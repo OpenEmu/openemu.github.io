@@ -38,6 +38,10 @@ $(function(){
     }, 500);
   });
 
+  // img-border
+  $('.img-border').each(function(){
+    $(this).removeClass('img-border').wrap('<b class="img-border">');
+  });
 
   // gallery
   $('.intro-th a').on('click', function(e){

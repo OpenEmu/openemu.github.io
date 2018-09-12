@@ -67,7 +67,12 @@
                 </li>
               </ul>
               <ul class="gallery intro-th list-reset mb-8 -ml-5 lg:mb-0 flex lg:flex-wrap">
-                <li v-for="img in intro" class="lg:mb-5 ml-5 lg:w-auto relative"><a href="#" :class="{ active: img.active }" :data-src="'img/'+ img.main"><img :src="'img/'+ img.th" alt="screenshot thumbnail" class="transition" :class="{'opacity-50': !img.active}" /> <i v-if="img.active" class="ring -m-3px absolute pin rounded-sm shadow-ring transition"></i></a></li>
+                <li v-for="img in intro" class="lg:mb-5 ml-5 lg:w-auto relative">
+                  <a href="#" :class="{ active: img.active }" :data-src="'img/'+ img.main">
+                    <img :src="'img/'+ img.th" alt="screenshot thumbnail" class="img-border transition" :class="{'opacity-50': !img.active}" />
+                    <i v-if="img.active" class="ring -m-3px absolute pin rounded-sm shadow-ring transition"></i>
+                  </a>
+                </li>
               </ul>
             </div>
             <div class="flex-1 relative">
@@ -107,17 +112,17 @@
               <div class="lg:flex justify-between text-center">
                 <div class="mx-auto lg:mx-0 max-w-xxs">
                   <p class="mb-8 py-2 px-4 inline-block bg-red-dark bg-btn text-black text-lg rounded shadow-lg text-shadow-white shadow-btn">1</p>
-                  <p><img src="img/org-step1.jpg" alt="step 1" /></p>
+                  <p><img src="img/org-step1.jpg" alt="step 1" class="img-border" /></p>
                   <p class="mb-12 lg:mb-0 px-2">Drag n’ Drop a backup game (ROM) from your Mac desktop.</p>
                 </div>
                 <div class="mx-auto lg:mx-0 max-w-xxs">
                   <p class="mb-8 py-2 px-4 inline-block bg-red-dark bg-btn text-black text-lg rounded shadow-lg text-shadow-white shadow-btn">2</p>
-                  <p><img src="img/org-step2.jpg" alt="step 1" /></p>
+                  <p><img src="img/org-step2.jpg" alt="step 1" class="img-border" /></p>
                   <p class="mb-12 lg:mb-0 px-2">OpenEmu 'scans' your game and begins the organisation process.</p>
                 </div>
                 <div class="mx-auto lg:mx-0 max-w-xxs">
                   <p class="mb-8 py-2 px-4 inline-block bg-red-dark bg-btn text-black text-lg rounded shadow-lg text-shadow-white shadow-btn">3</p>
-                  <p><img src="img/org-step3.jpg" alt="step 1" /></p>
+                  <p><img src="img/org-step3.jpg" alt="step 1" class="img-border" /></p>
                   <p class="px-2">Your game is now neatly organised and you are ready to start playing!</p>
                 </div>
               </div>
