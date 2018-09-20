@@ -84,4 +84,8 @@ $(function(){
     });
   });
 
+  if(location.hash == '#donate'){
+    $('.donate-nav').click();
+  }
+
 });
