@@ -1,5 +1,4 @@
 let gulp = require('gulp');
-let browserSync = require('browser-sync').create();
 let postcss = require('gulp-postcss');
 let tailwindcss = require('tailwindcss');
 let purgecss = require('gulp-purgecss');
@@ -8,7 +7,8 @@ let cleanCSS = require('gulp-clean-css');
 let concat = require('gulp-concat');
 let rename = require('gulp-rename');
 let uglify = require('gulp-uglify');
-let htmlmin = require('gulp-htmlmin');
+let hash = require('gulp-hash');
+let references = require('gulp-hash-references');
 
 gulp.task('css', function(){
   return gulp.src('./css/main.css')
@@ -33,8 +33,12 @@ gulp.task('css', function(){
         cascade: false
     }))
     .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(hash())
     .pipe(gulp.dest('../css/'))
-    .pipe(browserSync.reload({stream:true}));
+    .pipe(hash.manifest('./asset-manifest.json', {
+      deleteOld: true,
+      sourceDir: '../css/'
+    }));
 });
 
 gulp.task('js', function(){
@@ -45,27 +49,23 @@ gulp.task('js', function(){
   ])
   .pipe(concat('main.js'))
   .pipe(uglify())
+  .pipe(hash())
   .pipe(gulp.dest('../js/'))
-  .pipe(browserSync.reload({stream:true}));
+  .pipe(hash.manifest('./asset-manifest.json', {
+    deleteOld: true,
+    sourceDir: '../js/'
+  }));
 });
 
 gulp.task('html', function(){
-  return gulp.src('./*.html')
-  .pipe(htmlmin({collapseWhitespace: true}))
-  .pipe(gulp.dest('../'))
-  .pipe(browserSync.reload({stream:true}));
-});
-
-gulp.task('data', function(){
-  return gulp.src('../data.js')
-  .pipe(browserSync.reload({stream:true}));
+  return gulp.src('./index.html')
+  .pipe(references('./asset-manifest.json'))
+  .pipe(gulp.dest('../'));
 });
 
 gulp.task('default', function(){
   // $ ./node_modules/.bin/gulp
-  browserSync.init({server: { baseDir: "../" }});
-  gulp.watch(['./css/**/*.css', './tailwind.js', './*.html'], ['css']);
-  gulp.watch('./js/**/*.js', ['js']);
-  gulp.watch('./index.html', ['html']);
-  gulp.watch('../data.js', ['data']);
+  gulp.watch(['./css/**/*.css', './tailwind.js', './index.html'], gulp.series('css', 'html'));
+  gulp.watch('./js/**/*.js', gulp.series('js', 'html'));
+  gulp.watch('./index.html', gulp.series('html'));
 });
