@@ -38,7 +38,8 @@ gulp.task('css', function(){
     .pipe(hash.manifest('./asset-manifest.json', {
       deleteOld: true,
       sourceDir: '../css/'
-    }));
+    }))
+    .pipe(gulp.dest('.'));
 });
 
 gulp.task('js', function(){
@@ -54,7 +55,8 @@ gulp.task('js', function(){
   .pipe(hash.manifest('./asset-manifest.json', {
     deleteOld: true,
     sourceDir: '../js/'
-  }));
+  }))
+  .pipe(gulp.dest('.'));
 });
 
 gulp.task('html', function(){
