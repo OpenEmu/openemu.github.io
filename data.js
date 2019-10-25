@@ -3,12 +3,12 @@ var oe = new Vue({
   el: '.page',
   data: {
     details: {
-      version: '2.0.9.1',
-      req: '10.11'
+      version: '2.1',
+      req: '10.14'
     },
     download: {
-      latest: 'https://github.com/OpenEmu/OpenEmu/releases/download/v2.0.9.1/OpenEmu_2.0.9.1.zip',
-      experimental: 'https://github.com/OpenEmu/OpenEmu/releases/download/v2.0.9.1/OpenEmu_2.0.9.1-experimental.zip'
+      latest: 'https://github.com/OpenEmu/OpenEmu/releases/download/v2.1/OpenEmu_2.1.zip',
+      experimental: 'https://github.com/OpenEmu/OpenEmu/releases/download/v2.1/OpenEmu_2.1-experimental.zip'
     },
     intro: [
       { th: 'intro-th1.jpg', main: 'intro-nes-grid.png', active: true },
@@ -30,7 +30,6 @@ var oe = new Vue({
       { name: 'PS3 Neo Geo Pad USB' },
       { name: 'Logitech series (Dual Action, Rumblepad 2, Gamepad F310/F510/F710)' },
       { name: 'Gravis GamePad Pro' },
-      { name: 'Retrode (SNES)' },
       { name: 'N64 Adaptoid' }
     ],
     systems: [
