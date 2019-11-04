@@ -88,7 +88,7 @@ a:hover,a:focus { color: var(--color-blue-700); }
 .flex-col { flex-direction: column; }
 .flex-1 { flex: 1 1 0%; }
 
-.btn { padding: .1rem 1rem; background: transparent; font-weight: bold; font-size: .75rem; line-height: normal; text-decoration: none; display: inline-block; border-radius: 100rem; }
+.btn { padding: .1rem 1rem; background: transparent; font-weight: bold; font-size: .875rem; line-height: normal; text-decoration: none; display: inline-block; border-radius: 100rem; }
 .btn-red { background: var(--color-red-600); color: #FFF; }
 .btn-red:hover,.btn-red:focus { background: var(--color-red-800); color: #FFF; }
 
@@ -99,10 +99,10 @@ header p small { padding: .3rem 0; display: block; }
 
 section { padding: 0 0 2.5rem; position: relative; }
 section h4 { margin-bottom: 2rem; padding-left: 2.5rem; font-size: 1rem; line-height: 1.5rem; display: flex; flex-wrap: wrap; align-items: center; }
-section h4 b { margin-left: .5rem; font-size: .75rem; opacity: .5; }
-section h4 small { padding: .2rem 0; width: 100%; color: var(--color-red-600); font-size: .75rem; display: block; }
+section h4 b { margin-left: .5rem; font-size: .875rem; opacity: .5; }
+section h4 small { padding: .2rem 0; width: 100%; color: var(--color-red-600); font-size: .875rem; display: block; }
 section ul { margin: 0 0 2rem; padding: 0; list-style: none; }
-section li { margin-bottom: 1rem; padding: 0 0 0 2.5rem; font-size: .75rem; line-height: 1.2rem; position: relative; }
+section li { margin-bottom: 1rem; padding: 0 0 0 2.5rem; font-size: .875rem; line-height: 1.2rem; position: relative; }
 section li:before { margin: -3px 0 0 -3px; width: 6px; height: 6px; background: currentColor; display: block; content: ""; position: absolute; top: .6rem; left: .75rem; border-radius: 6px; }
 section h5 { margin-bottom: 2rem; padding-left: 2.5rem; color: var(--color-yellow-500); }
 
