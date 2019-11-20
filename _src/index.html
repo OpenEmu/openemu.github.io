@@ -52,7 +52,7 @@
                 <li>
                   <p class="flex items-center justify-center lg:justify-start">
                     <a :href="download.latest" class="py-3 px-8 bg-red bg-btn hover:bg-red-light focus:bg-red-light text-white font-bold inline-block rounded shadow-btn">Download Now</a>
-                    <b class="ml-4 text-xs opacity-25">v{{ details.version }}</b>
+                    <b class="ml-4 text-xs"><a :href="'./rnotes/' + details.version + '.html'" class="text-current hover:text-white focus:text-white opacity-25 hover:opacity-100 focus:opacity-100" title="Release Notes">v{{ details.version }}</a></b>
                   </p>
                   <ul class="mb-1 list-reset text-xs font-bold">
                     <li class="mr-4 inline-block"><a :href="download.experimental" class="text-red hover:text-red-light focus:text-red-light"><i class="fa fa-fw fa-download text-white opacity-50"></i> Experimental</a></li>
