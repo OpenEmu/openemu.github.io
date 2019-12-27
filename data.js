@@ -3,12 +3,12 @@ var oe = new Vue({
   el: '.page',
   data: {
     details: {
-      version: '2.1.1',
+      version: '2.2',
       req: '10.14'
     },
     download: {
-      latest: 'https://github.com/OpenEmu/OpenEmu/releases/download/v2.1.1/OpenEmu_2.1.1.zip',
-      experimental: 'https://github.com/OpenEmu/OpenEmu/releases/download/v2.1.1/OpenEmu_2.1.1-experimental.zip'
+      latest: 'https://github.com/OpenEmu/OpenEmu/releases/download/v2.2/OpenEmu_2.2.zip',
+      experimental: 'https://github.com/OpenEmu/OpenEmu/releases/download/v2.2/OpenEmu_2.2-experimental.zip'
     },
     intro: [
       { th: 'intro-th1.jpg', main: 'intro-nes-grid.png', active: true },
