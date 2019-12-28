@@ -47,6 +47,7 @@ var oe = new Vue({
       { name: 'Nintendo (NES) / Famicom', core: 'FCEUX, Nestopia' },
       { name: 'Nintendo DS', core: 'DeSmuME' },
       { name: 'Nintendo 64', core: 'Mupen64Plus' },
+      { name: 'Nintendo GameCube', core: 'Dolphin' },
       { name: 'Odyssey²/Videopac+', core: 'O2EM' },
       { name: 'PC-FX', core: 'Mednafen' },
       { name: 'SG-1000', core: 'Genesis Plus GX' },
