@@ -16,7 +16,7 @@ img { vertical-align: middle; }
 .img-border { display: inline-block; position: relative; }
 .img-border:after { border: 1px solid #000; width: 100%; height: 100%; display: block; content: ""; position: absolute; top: 0; left: 0; box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 2px 3px rgba(0,0,0,0.75); }
 
-.controls-prefs { top: 65px; left: -247px; }
+.controls-prefs { top: 87px; left: -216px; border-radius: 10px; box-shadow: 0 0 0 1px rgba(0,0,0,.2), 0 0 40px rgba(0,0,0,.75); }
 
 .controller { @apply .hidden .absolute .pin-t .z-10 .transition-slow; }
 .controller-sms { left: -548px; }

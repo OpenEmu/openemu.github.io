@@ -20,6 +20,6 @@
     "gulp-rename": "*",
     "gulp-uglify": "*",
     "postcss": "*",
-    "tailwindcss": "*"
+    "tailwindcss": "0.7.4"
   }
 }

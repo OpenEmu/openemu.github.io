@@ -17,21 +17,10 @@ gulp.task('css', function(){
     ]))
     .pipe(purgecss({
       content: ['./*.html', './js/*.js'],
-      extractors: [
-        {
-          extractor: class TailwindExtractor {
-            static extract(content) {
-              return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
-            }
-          },
-          extensions: ['html', 'js']
-        }
-      ]
+      defaultExtractor: content =>
+      content.match(/[\w-/:]+(?<!:)/g) || []
     }))
-    .pipe(autoprefixer({
-        browsers: ['last 2 versions'],
-        cascade: false
-    }))
+    .pipe(autoprefixer())
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(hash())
     .pipe(gulp.dest('../css/'))
