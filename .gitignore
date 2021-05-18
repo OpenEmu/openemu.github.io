@@ -65,3 +65,4 @@ typings/
 node_modules
 package-lock.json
 _dropbox_node_prep.scpt
+config.codekit3
