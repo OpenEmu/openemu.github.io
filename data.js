@@ -60,7 +60,7 @@ var oe = new Vue({
       { name: 'Sega Saturn', core: 'Mednafen' },
       { name: 'Sony PlayStation', core: 'Mednafen' },
       { name: 'Sony PSP', core: 'PPSSPP' },
-      { name: 'Super Nintendo (SNES)', core: 'Higan, Snes9x' },
+      { name: 'Super Nintendo (SNES)', core: 'BSNES, Snes9x' },
       { name: 'TurboGrafx-16/PC Engine/SuperGrafx', core: 'Mednafen' },
       { name: 'TurboGrafx-CD/PC Engine CD', core: 'Mednafen' },
       { name: 'Virtual Boy', core: 'Mednafen' },
