@@ -89,7 +89,7 @@ $(function(){
   });
 
   // donate
-  $('.donate-nav').click(function(e) {
+  $('.donate-nav').on('click', function(e) {
     e.preventDefault();
     $(this).modal({
       fadeDuration: 250
@@ -97,7 +97,9 @@ $(function(){
   });
 
   if(location.hash == '#donate'){
-    $('.donate-nav').click();
+    $('#donate-modal').modal({
+      fadeDuration: 250
+    });
   }
 
 });
