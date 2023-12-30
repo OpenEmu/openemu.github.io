@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>OpenEmu 2.4.1 Release Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="notes.css" rel="stylesheet" />
+
+</head>
+<body>
+  <div class="ui">
+    <header>
+      <a href="https://openemu.org/" class="oe-logo"><img src="https://openemu.org/rnotes/logo-128px.png" alt="OpenEmu Logo" /></a>
+      <p>
+        <small>Support OpenEmu</small>
+        <a href="https://openemu.org/donate/" class="btn btn-red">Donate</a>
+      </p>
+    </header>
+    <main>
+
+<!-- version -->
+      <section>
+        <h4>
+          OpenEmu <b>v2.4.1</b>
+          <small>Requires macOS 10.14.4 or above</small>
+        </h4>
+        <ul>
+          <li>This is a quick fix to resolve launching on Apple silicon (ARM) Macs. For now, OpenEmu is still Intel-only and will require the use of <a href="https://support.apple.com/en-us/HT211861">Rosetta 2</a> in order to launch on a Mac with Apple silicon.</li>
+        </ul>
+      </section>
+<!-- /version -->
+
+      <section>
+        <h4>
+          OpenEmu <b>v2.4</b>
+        </h4>
+        <ul>
+          <li>This long-awaited release contains many bug fixes, performance improvements, compatibility for later macOS, localization updates, framework upgrades, UI/UX tweaks, and a massive codebase modernization with the majority rewritten in Swift. This large undertaking was a few years in the making, and while there may be a few minor regressions in the short term, the result will leave OpenEmu future-proof and easier to maintain. A full list of changes may be added later.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>
+          OpenEmu <b>v2.3.3</b>
+        </h4>
+        <ul>
+          <li>Fixed a crash that can occur on app launch with macOS Big Sur.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>
+          OpenEmu <b>v2.3.2</b>
+        </h4>
+        <ul>
+          <li>Added List View saving for column sort and visiblity (right click column to enable/disable) between app launches.</li>
+          <li>Improved UX and relaxed requirements for mitigation of App Translocation / Gatekeeper Path Randomization.</li>
+          <li>Fixed quitting the app during gameplay not showing confirmation alert or saving progress.</li>
+          <li>Fixed List View being unsorted if it was the initial view mode.</li>
+          <li>Fixed red bars that may appear in the background of fullscreen mode on macOS Big Sur.</li>
+          <li>Fixed a crash that can occur in the "Change Game Library Folder Location" open panel if navigating using the keyboard.</li>
+          <li>Fixed a crash that can occur with international language input keys and possibly others.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>
+          OpenEmu <b>v2.3.1</b>
+        </h4>
+        <ul>
+          <li>Fixed shader configurations not persisting.</li>
+          <li>Fixed fullscreen mode "Fill Screen" scale option only resizing to a maximum integer scale when integer scaling is enabled. Instead, it now fills the entire screen as expected.</li>
+          <li>Fixed a hang that can occur when loading a game if the app is affected by App Translocation / Gatekeeper Path Randomization.</li>
+          <li>Improved UX to mitigate game launch issues related to Gatekeeper. &mdash; Now prompts with requirement to move to your Applications folder on app launch.</li>
+          <li>Improved UX for fullscreen popout window. &mdash; Now fills the entire screen by default, if no previous scale was set. Seperate scale settings between windowed and fullscreen modes are also remembered.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>
+          OpenEmu <b>v2.3</b>
+        </h4>
+        <ul>
+          <li>Initial macOS 10.11 Big Sur support. Note: Native Apple Silicon support (no Rosetta 2) in a future update.</li>
+          <li>Redesigned most UI in native macOS style, replacing custom theming.</li>
+          <li>Added redesigned app icon ready for Big Sur.</li>
+          <li>Added <a href="https://github.com/OpenEmu/OpenEmu/wiki/User-guide:-Importing">import failure</a> messages.</li>
+          <li>Added shader compiler optimization pass for faster performance.</li>
+          <li>Added integer scaling options to the HUD bar for fullscreen popout window, by default keeping the last used integer scale. Note: HUD bar > cog wheel > Scale > "Fill Screen" to fill the whole screen.</li>
+          <li>Added "Always snap popout gameplay window to integer scale" when dragging. Note: Hold "shift" before dragging to disable snap resizing.</li>
+          <li>Added "Always use popout gameplay window" as default.</li>
+          <li>Added "Always float popout gameplay window on top" Gameplay Window Management option.</li>
+          <li>Added menu bar items and keyboard shortcuts (⌘3–6) for changing category.</li>
+          <li>Added increase/decrease buttons to slider control.</li>
+          <li>Added keyboard shortcuts (⌘+/⌘–) for changing grid size.</li>
+          <li>Added toolbar customization (Right click > Customize Toolbar…).</li>
+          <li>Added <a href="https://github.com/OpenEmu/OpenEmu/wiki/User-guide:-Light-gun-and-Mouse">light gun support</a> for PS1 and Sega Saturn.</li>
+          <li>Improved error message when a core plugin crashes.</li>
+          <li>Improved UX for core download failures.</li>
+          <li>Improved UI polish and HIG conformance.</li>
+          <li>Improved the codebase with huge refactoring to Swift, modernization and cleanup.</li>
+          <li>Improved accessibility of in-game notifications and VoiceOver.</li>
+          <li>Fixed multi-output audio device crash.</li>
+          <li>Fixed a rare import-related crash.</li>
+          <li>Fixed a rare issue where games might not start due to permissions.</li>
+          <li>Fixed rare issue where screenshots would be a black screen.</li>
+          <li>Fixed case where duplicate save states could appear.</li>
+          <li>Fixed using shared/split fullscreen.</li>
+          <li>Fixed the first fullscreen animation of the popout game window after it is moved to another screen.</li>
+          <li>Fixed associating common file extensions with OpenEmu.</li>
+          <li>Updated XADMaster framework.</li>
+          <li>Updated localizations.</li>
+          <li>Other bug fixes and performance improvements.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>
+          OpenEmu <b>v2.2.1</b>
+        </h4>
+        <ul>
+          <li>Added <a href="https://byuu.org/bsnes">BSNES</a>, an accurate SNES emulator with "Display Mode" screen options for HD mode 7 graphics, as the new secondary SNES core plugin. Higan core plugin is now deprecated and will be removed in 6 months.</li>
+          <li>Added support for GameCube hybrid analog/digital triggers. &mdash; Requires gamepad with true analog triggers, such as the PS4 DualShock 4 or Xbox One S.</li>
+          <li>Added automap support for Xbox One S Wireless Controller.</li>
+          <li>Added automap support for Retro-Bit Official Sega Genesis/Sega Saturn Bluetooth Controller 8-Button Arcade Pad.</li>
+          <li>Added missing GameCube system icon and controller Retina graphics.</li>
+          <li>Fixed analog-related input regression introduced in OpenEmu 2.2 where one may be unable to map certain controls or directions may get stuck or not respond in-game.</li>
+          <li>Fixed PS4 DualShock 4 delayed inputs and high CPU usage on macOS 10.15 Catalina. &mdash; This work arounds a performance issue in IOHIDElementGetParent.</li>
+          <li>Fixed column width when resizing and row highlight system color in List View.</li>
+          <li>Fixed rare crash at startup when dealing with unsupported plugins.</li>
+          <li>Updated localizations.</li>
+          <li>Other bug fixes and performance improvements.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>
+          OpenEmu <b>v2.2</b>
+        </h4>
+        <ul>
+          <li><b>Added GameCube system support.</b> &mdash; This core port is absolutely unsupported by Dolphin emulator developers, so please <b>DO NOT</b> report game glitches/compatibility issues upstream. A fast CPU is required for full speed emulation. Saves states are currently <b>NOT</b> enabled due to future updates breaking compatibility. Multi-disc games are currently <b>NOT</b> supported.</li>
+          <li>Added support for <a href="https://github.com/OpenEmu/slang-shaders">custom shader bundles</a>.</li>
+          <li>Added automatic analog axis calibration. — Minimum and maximum values learned as the stick is moved.</li>
+          <li>Added rotation and additional Display Mode screen options for NDS games.</li>
+          <li>Added support for multi-port adapters that use multiple USB HID interfaces (e.g. Mayflash).</li>
+          <li>Fixed issue where using multiple "automapped" gamepads with similiar HID profiles would not work (e.g. Logitech series, DualShock 4 and DualShock 4 v2, Wii U Pro and Wiimote Plus).</li>
+          <li>Fixed Rename Game not working in List View.</li>
+          <li>Fixed rare issue where zipped ROMs that failed to load would get deleted.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>
+          OpenEmu <b>v2.1.1</b>
+        </h4>
+        <ul>
+          <li>Fixed audio not working for Bluetooth and other secondary audio output devices.</li>
+          <li>Fixed newly imported Sega Saturn games crashing when loading on macOS 10.15 Catalina. &mdash; Saturn games imported using OpenEmu 2.1, as well as N64 and Sega/Mega CD, <b>MUST</b> be reimported to fully resolve the crash.</li>
+          <li>Fixed toggling Display Mode screen options for NDS games.</li>
+          <li>Fixed a rare crash when starting games in a fullscreen popout window.</li>
+          <li>Fixed a rare crash when quitting gameplay.</li>
+          <li>Fixed a rare case where a compressed ROM might not reimport.</li>
+          <li>Updated XADMaster framework.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>
+          OpenEmu <b>v2.1</b>
+        </h4>
+        <ul>
+          <li>Initial macOS 10.15 Catalina support.</li>
+          <li>Added new Metal renderer and display architecture, significantly improving frame pacing, performance and battery life - no more video latency at increased window sizes or fullscreen.</li>
+          <li>Added new configurable, multi-pass post processing shader system using Slang - several preset shaders for impressive effects included.</li>
+          <li>Added <b>Rapid Fire Toggle</b> and <b>Rapid Fire Clear</b> special keys in Controls preferences - used in-game when pressing a button + the toggle key to enable.</li>
+          <li>Improved support for Nintendo Switch Pro Controller, including automatic analog calibration and support for USB connectivity.</li>
+          <li>Improved support for USB Audio output devices.</li>
+          <li>Fixed stuck search filter when switching between Save States and Screenshots collections.</li>
+          <li>Removed Cg and Syphon frameworks.</li>
+          <li>Updated localizations.</li>
+          <li>Other bug fixes and performance improvements.</li>
+        </ul>
+        <h5>Known Issues since v2.1</h5>
+        <ul>
+          <li><b>IMPORTANT:</b> Due to new security rules in macOS 10.15 Catalina, in order for keyboard input to work you MUST grant OpenEmu "Input Monitoring" access in the <a href="https://support.apple.com/guide/mac-help/change-privacy-preferences-on-mac-mh32356/mac">Privacy pane</a> of Security & Privacy preferences.</li>
+          <li>There may be a slight delay the first time after launching a game due to shaders compiling.</li>
+          <li>The old Cg "filters" are not compatible with the new shader system.</li>
+          <li>Control mappings may be reset due to changes in macOS 10.15 Catalina.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>
+          OpenEmu <b>v2.0.9.1</b>
+        </h4>
+        <ul>
+          <li>Fixed input not working for some users in the initial 2.0.9 release.</li>
+          <li>Fixed the Library grid view appearing red in some instances on macOS 10.14 Mojave.</li>
+          <li>Fixed "Consolidate Files" not copying all the referenced files for CD-based games.</li>
+          <li>Added Chinese (Traditional) localization.</li>
+          <li>Updated Catalan, Italian localizations.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>
+          OpenEmu <b>v2.0.8</b>
+        </h4>
+        <ul>
+          <li>Added "Display Mode" change support to the HUD bar for display-related options, currently available for Atari 2600, Game Boy, Game Gear, NES, Nintendo DS, Virtual Boy.</li>
+          <li>Added Next/Last Display Mode change hotkeys.</li>
+          <li>Improved the UI to better fit macOS 10.14 Mojave native menus and system colors.</li>
+          <li>Fixed case where a directional button could get stuck.</li>
+          <li>Fixed a rare input-related crash.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>
+          OpenEmu <b>v2.0.7</b>
+        </h4>
+        <ul>
+          <li>Initial macOS 10.14 Mojave support. Users that updated to Mojave before updating OpenEmu will need to manually download the update from <a href="https://openemu.org/">openemu.org</a></li>
+          <li>Added support for mapping controls with Touch Bar buttons.</li>
+          <li>Added Step Frame Forward and Step Frame Backward special keys in Controls preferences.</li>
+          <li>Added Fast Forward and Rewind notifications.</li>
+          <li>Added "Show in Finder" menu item in Save States and Screenshots collections.</li>
+          <li>Improved the Import Issue Resolver with a new modal UI.</li>
+          <li>Improved using controls for digital buttons mapped onto an analog stick.</li>
+          <li>Fixed audio becoming slightly out of sync after fast forwarding gameplay.</li>
+          <li>Fixed audio glitches for PSP games.</li>
+          <li>Fixed leftover window after quitting gameplay in a fullscreen popout window.</li>
+          <li>Fixed empty windows in Mission Control after quitting gameplay.</li>
+          <li>Fixed HUD bar remaining visible after closing popout window.</li>
+          <li>Fixed games not sorting by "Last Played" in List View.</li>
+          <li>Fixed case where bad/incomplete PSP game ISOs could be allowed to import.</li>
+          <li>Fixed various UI issues in the Homebrew collection.</li>
+          <li>Fixed a crash from mapping non-standard keys on external keyboards.</li>
+          <li>Fixed a crash when a button profile for a previously mapped controller changed.</li>
+          <li>Fixed a rare crash when deleting a game from a collection.</li>
+          <li>Fixed a rare case where a ROM hack might not import.</li>
+          <li>Fixed the appearance of localized text in various UI.</li>
+          <li>Updated localizations.</li>
+          <li>Updated Sparkle and XADMaster frameworks.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>
+          OpenEmu <b>v2.0.6.1</b>
+        </h4>
+        <ul>
+          <li><b>Added Sega Saturn system support.</b> - Very CPU intensive, minimum requirement of a quad-core i7 processor for full speed.</li>
+          <li>Added <a href="https://github.com/gonetz/GLideN64">GLideN64</a> as the new default Mupen64Plus GPU plugin, significantly improving N64 graphics. - Overall game compatibility will further improve in a future update.</li>
+          <li>Added Quick Look support in the Screenshots collection by pressing Space bar.</li>
+          <li>Added light gun support for Sega Master System.</li>
+          <li>Removed deprecated core plugins and their save states on launch.</li>
+          <li>Improved N64 graphics.</li>
+          <li>Improved UX for deleting games so they cannot be orphaned in the Game Library folder.</li>
+          <li>Improved UX for importing M3U files where they could fail or crash.</li>
+          <li>Improved Touch Bar graphics.</li>
+          <li>Improved algorithm for reading the serial of a PlayStation game.</li>
+          <li>Fixed a hang that occurs on 10.13 High Sierra.</li>
+          <li>Fixed regression with compressed files not being correctly imported. - Would import decompressed but with the original compressed file extension.</li>
+          <li>Fixed case where changing Game Library folder location could fail.</li>
+          <li>Fixed case where clearing a control mapping would not save between launches.</li>
+          <li>Fixed a crash accessing Game Library on NAS/SMB shares or external drives.</li>
+          <li>Fixed a crash when deleting a game that was already deleted.</li>
+          <li>Fixed a crash when downloading nonexistent cover art for a Homebrew collection game.</li>
+          <li>Fixed a rare crash using cheat codes.</li>
+          <li>Fixed Wii U Pro Controller analog axis range.</li>
+          <li>Fixed fast forwarding interfering with pausing gameplay.</li>
+          <li>Fixed sidebar not remembering width changes between launches.</li>
+          <li>Fixed unwanted interpolation in screenshots.</li>
+          <li>Fixed "Battle Heat" for PC-FX being falsely identified as TurboGrafx-CD/PCE CD.</li>
+          <li>Fixed various 10.13 SDK issues and runtime warnings.</li>
+          <li>Updated Japanese localization.</li>
+          <li>Updated Sparkle framework.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>
+          OpenEmu <b>v2.0.5</b>
+        </h4>
+        <ul>
+          <li>Added automap support for Nintendo Switch Pro Controller.</li>
+          <li>Added localized PC Engine controller graphic.</li>
+          <li>Improved TurboGrafx controller graphic with pixel perfect Retina version.</li>
+          <li>Fixed library error alerts not displaying.</li>
+          <li>Fixed a crash with games in fullscreen.</li>
+          <li>Fixed a crash when importing an invalid cue sheet.</li>
+          <li>Fixed a crash when importing an unmatched multi-disc game.</li>
+          <li>Fixed rare crash at startup.</li>
+          <li>Fixed a potential hang when migrating game library and preferences to a new machine.</li>
+          <li>Fixed various 10.12 SDK UI issues.</li>
+          <li>Updated localizations.</li>
+          <li>Note: Touch Bar users should update to the latest macOS 10.12 for full support.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>
+          OpenEmu <b>v2.0.4</b>
+        </h4>
+        <ul>
+          <li>Added support for the new MacBook Pro Touch Bar.</li>
+          <li>Added gameplay preference to allow playing with controllers while in the background.</li>
+          <li>Added automap support for PS4 Slim DualShock 4 (model CUH-ZCT2).</li>
+          <li>Improved importing <a href="https://github.com/OpenEmu/OpenEmu/wiki/User-guide:-CD-based-games#q-i-have-a-multi-disc-game">Multi-Disc Games</a>.</li>
+          <li>Fixed case where games would not load if a previous game failed to load.</li>
+          <li>Fixed a potential crash when checking for and downloading core plugin updates.</li>
+          <li>Fixed a crash when using the popout gameplay window and accessing the Services submenu on macOS 10.12.</li>
+          <li>Fixed main window toolbar appearance for some localizations.</li>
+          <li>Fixed various 10.12 SDK UI issues.</li>
+          <li>Added Catalan localization.</li>
+          <li>Updated localizations.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>
+          OpenEmu <b>v2.0.3</b>
+        </h4>
+        <ul>
+          <li>Fixed analog controllers that send excessive input events (e.g. DualShock 4 and others) interfering with frontend and core functions.</li>
+          <li>Fixed case where some bluetooth mice (e.g. Logitech MX Anywhere 2) break the input system.</li>
+          <li>Fixed Steam Controller support when properly configured through Steam.</li>
+          <li>Fixed case where cancelling an alert could make it impossible to stop or reset gameplay.</li>
+          <li>Updated localizations.</li>
+          <li>Other bug fixes and performance improvements.</li>
+          <li>Note: Preferences for <a href="https://github.com/OpenEmu/OpenEmu/wiki/User-Guide:-Default-Cores">Default Cores</a> have been reset.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>
+          OpenEmu <b>v2.0.2</b>
+        </h4>
+        <ul>
+          <li>Added <a href="https://mgba.io/">mGBA</a>, a faster and more accurate GBA emulator, as the new default GBA core plugin.</li>
+          <li>Added automap support for Horipad Ultimate controller.</li>
+          <li>Optimized input handling and core helper process to further reduce latency.</li>
+          <li>Improved search results in Save States and Screenshots libraries to be more precise.</li>
+          <li>Fixed N64 games running too fast.</li>
+          <li>Fixed controllers with a hat switch not retaining their proper D-pad mappings.</li>
+          <li>Fixed reversed Y-axis for MFi devices.</li>
+          <li>Fixed case where BIOS files might not import correctly after a new core plugin install.</li>
+          <li>Fixed case where suppressing an alert might not remember the choice correctly.</li>
+          <li>Fixed the appearance of localized text in Library and Preferences with Auto Layout.</li>
+          <li>Fixed screenshots not saving for game titles with forward slashes.</li>
+          <li>Added Chinese (Simplified), Dutch, Japanese localizations.</li>
+          <li>Updated localizations.</li>
+          <li>Other bug fixes and performance improvements.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>
+          OpenEmu <b>v2.0.1</b>
+        </h4>
+        <ul>
+          <li>Fixed new system plugins not being available.</li>
+          <li>Fixed save states not saving if alert is suppressed.</li>
+          <li>Add Odyssey²/Videopac controller graphic.</li>
+          <li>Note: If BIOS files were not importing correctly after a new core install, please remove the imported files, restart the app and import your BIOS files again.</li>
+        </ul>
+        <h5>Changes since v2.0</h5>
+        <ul>
+          <li><b>Added support for new systems:</b><br />
+            - Atari 5200<br />
+            - Atari 7800<br />
+            - Atari Lynx<br />
+            - ColecoVision<br />
+            - Famicom Disk System<br />
+            - Intellivision<br />
+            - Nintendo 64<br />
+            - Odyssey²/Videopac+<br />
+            - PC-FX<br />
+            - SG-1000<br />
+            - Sega CD<br />
+            - Sony PSP<br />
+            - Sony PlayStation<br />
+            - TurboGrafx-CD/PCE-CD<br />
+            - Vectrex<br />
+            - WonderSwan
+          </li>
+          <li>Redesigned UI with a beautiful, modern look.</li>
+          <li>Added real-time <a href="https://www.youtube.com/watch?v=BSLMPnVZITM">gameplay rewinding</a>.</li>
+          <li>Added Save States and Screenshots organizers.</li>
+          <li>Added Homebrew collection with over 80 great games.</li>
+          <li>Added automap support for SteelSeries Nimbus and Stratus XL controllers.</li>
+          <li>Optimized input handling to eliminate latency.</li>
+          <li>Fixed performance for certain GPUs.</li>
+          <li>Updated translations.</li>
+          <li>Other bug fixes and performance improvements.</li>
+        </ul>
+        <h5>Known Issues since v2.0</h5>
+        <ul>
+          <li>Control mappings have been reset due to changes with the input system.</li>
+          <li>Previous Sega Genesis/Mega Drive save states have been removed due to unresolvable incompatibilities with the Genesis Plus GX emulator.</li>
+          <li>Using <a href="https://justgetflux.com/">f.lux</a> while playing games can cause performance issues or crashes, please disable f.lux to avoid problems.</li>
+          <li>If using a Mac with dual GPUs, consider using <a href="https://gfx.io/">gfxCardStatus</a> to switch to the higher-end discrete GPU for improved performance.</li>
+        </ul>
+      </section>
+
+    </main>
+
+  </div>
+</body>
+</html>
